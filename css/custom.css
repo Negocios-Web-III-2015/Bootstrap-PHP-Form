@@ -99,7 +99,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Transiciones */
-.thumbnail img:hover {
+.home-thumbnail img:hover {
 	transform: scale(1.1);
 }
 
@@ -110,6 +110,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .thumbnail {
 	overflow: hidden;
+}
+
+.bg-gris {
+	background-color: #F9F9F9;
 }
 
 /*
