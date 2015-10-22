@@ -98,6 +98,40 @@ h1, h2, h3, h4, h5, h6 {
 	border-color: #11866F;
 }
 
+.btn-default {
+	background-color: #95A5A6;
+	border-color: #95A5A6;
+	color: #FFFFFF;
+	border-radius: 0px;
+}
+
+.btn-default:hover,
+.btn-default:focus,
+.btn-default:active,
+.btn-default.active,
+.open .dropdown-toogle.btn-default {
+	color: #FFFFFF;
+	background-color: #7F9293;
+	border-color: #74898A;
+}
+
+.btn-danger {
+	background-color: #F5A5A6;
+	border-color: #F5A5A6;
+	color: #FFFFFF;
+	border-radius: 0px;
+}
+
+.btn-danger:hover,
+.btn-danger:focus,
+.btn-danger:active,
+.btn-danger.active,
+.open .dropdown-toogle.btn-danger {
+	color: #FFFFFF;
+	background-color: #FFA5A6;
+	border-color: #FFA5A6;
+}
+
 /* Transiciones */
 .home-thumbnail img:hover {
 	transform: scale(1.1);
@@ -114,6 +148,12 @@ h1, h2, h3, h4, h5, h6 {
 
 .bg-gris {
 	background-color: #F9F9F9;
+}
+
+/* Colores iconos redes sociales */
+.facebook:hover {
+	color: blue;
+	background-color: white;
 }
 
 /*

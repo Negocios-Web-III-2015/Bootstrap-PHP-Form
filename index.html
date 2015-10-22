@@ -46,16 +46,13 @@
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Temas <b class="caret"></b></a>
               <ul class="dropdown-menu">
               <li class="dropdown-header">Dashboard</li>
-                <li><a href="#">Opción 1</a></li>
-                <li><a href="#">Opción 2</a></li>
-                <li><a href="#">Opción 3</a></li>
+                <li><a href="html5.html">HTML5</a></li>
+                <li><a href="#">CSS3</a></li>
+                <li><a href="#">JavaScript</a></li>
                 <li class="divider"></li>
-                <li class="dropdown-header">Portafolio</li>
-                <li><a href="#">Portafolio 1</a></li>
-                <li><a href="#">Portafolio 2</a></li>
               </ul>
             </li>            
-            <li><a href="#contacto" data-toggle="modal">Contáctenos</a></li>
+            <li><a href="contacto.php">Contáctenos</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -70,6 +67,7 @@
         </p>
         <a href="#" class="btn btn-primary">Obtener Bootstrap</a>
         <a href="#" class="btn btn-success">Hechos con Bootstrap</a>
+        <a href="#" class="btn btn-danger">Hechos con Bootstrap</a>
       </div>
       <!-- Grid System -->
       <div class="row">
@@ -129,7 +127,7 @@
           <p>III Período 2015</p>
         </div>
         <div class="navbar-text pull-right">
-          <a href="#"><i class="fa fa-facebook-square fa-2x"></i></a>
+          <a href="#"><i class="fa fa-facebook-square fa-2x facebook"></i></a>
           <a href="#"><i class="fa fa-twitter fa-2x"></i></a>
           <a href="#"><i class="fa fa-google-plus fa-2x"></i></a>
         </div>
@@ -141,15 +139,51 @@
     <div class="modal fade" id="contacto" role="dialog">
       <div class="modal-dialog">
         <div class="modal-content">
-          <div class="modal-header">
-            <h4>Contáctenos<h4>
-          </div>
-          <div class="modal-body">
-            <p>Para cualquier tipo de consulta, favor enviar un correo a la dirección hsabillon@unicah.edu</p>
-          </div>
-          <div class="modal-footer">
-            <a class="btn btn-primary" data-dismiss="modal">Cerrar</a>
-          </div>
+          <!-- Formulario de contacto -->
+          <form class="form-horizontal" role="form" method="post" action="contacto.php">
+            <div class="modal-header">
+              <h4>Contáctenos</h4>
+            </div>
+            <div class="modal-body">
+              <div class="form-group">
+                <label for="contacto-nombre" class="col-sm-2 control-label">Nombre</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="contacto-nombre" placeholder="Nombre y Apellido">
+                  <?php echo "<p class='text-danger'>$errorNombre</p>"; ?>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="contacto-email" class="col-sm-2 control-label">Correo Electrónico</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="contacto-email" placeholder="jconnor@skynet.com">
+                  <?php echo "<p class='text-danger'>$errorEmail</p>"; ?>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="contacto-mensaje" class="col-sm-2 control-label">Mensaje</label>
+                <div class="col-sm-10">
+                  <textarea class="form-control" placeholder="Mensaje" rows="5"></textarea>
+                  <?php echo "<p class='text-danger'>$errorMensaje</p>"; ?>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="humano" class="col-sm-2 control-label">5 + 2 =</label>
+                <div class="col-sm-10">
+                  <input type="text" id="humano" class="form-control" placeholder="Tu respuesta">
+                  <?php echo "<p class='text-danger'>$errorHumano</p>"; ?>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-sm-10 col-sm-offset-2">
+                  <!-- Alerta para el usuario -->
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <a class="btn btn-default" data-dismiss="modal">Cerrar</a>
+              <button type="submit" class="btn btn-primary">Enviar</button>
+            </div>
+          </form>
         </div>
       </div>
     </div>
